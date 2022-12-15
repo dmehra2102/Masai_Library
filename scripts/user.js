@@ -4,7 +4,7 @@ genre.addEventListener("change", async (event)=>{
 	if(val===""){
 		FetchAllData();
 	}else{
-		let data = await fetch(`http://localhost:8080/books?genre=${val}`);
+		let data = await fetch(`https://dead-blue-smock.cyclic.app/books?genre=${val}`);
 		let new_data = await data.json();
 		ShowData(new_data);
 	}
@@ -15,7 +15,7 @@ const cost = document.querySelector(".cost_filter");
 cost.addEventListener("change", async (event)=>{
 	let val = event.target.value;
 	if(val!==""){
-		let data = await fetch(`http://localhost:8080/books?_sort=cost&_order=${val}`);
+		let data = await fetch(`https://dead-blue-smock.cyclic.app/books?_sort=cost&_order=${val}`);
 		let new_data = await data.json();
 		ShowData(new_data);
 	}else{
@@ -25,7 +25,7 @@ cost.addEventListener("change", async (event)=>{
 
 async function FetchAllData() {
 	try {
-		  let data = await fetch("http://localhost:8080/books");
+		  let data = await fetch("https://dead-blue-smock.cyclic.app/books");
 		  let all_data = await data.json();
 		  ShowData(all_data);
 	} catch (error) {
@@ -89,7 +89,7 @@ function Close(){
 async function ConfirmBook(id){
 	try {
 		let updated_data = await fetch(
-			`http://localhost:8080/books/${id}`,
+			`https://dead-blue-smock.cyclic.app/books/${id}`,
 			{
 				  method: "PATCH",
 				  headers: {

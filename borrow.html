@@ -41,9 +41,8 @@ document.querySelector(".back_btn").addEventListener("click", ()=>{
 
 	async function BorrowFunc(){
 		try {
-			let data = await fetch(`http://localhost:8080/books?borrowed=true`);
+			let data = await fetch(`https://dead-blue-smock.cyclic.app/books?borrowed=true`);
 			let all_data = await data.json();
-
 			ShowData(all_data);
 
 		} catch (error) {

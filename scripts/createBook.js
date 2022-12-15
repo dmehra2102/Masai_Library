@@ -20,21 +20,22 @@ add_book_btn.addEventListener("submit", (event) => {
 
 async function PostBookFunc(event, book_details) {
       try {
-            let book = await fetch("http://localhost:8080/books", {
+            let book = await fetch("https://dead-blue-smock.cyclic.app/books", {
                   method: "POST",
                   body: JSON.stringify(book_details),
                   headers: {
                         "Content-Type": "application/json",
                   },
             });
-            console.log(book);
-            event.stopPropagation();
+			if(book.ok){
+				FetchAllData();
+			}
       } catch (error) {}
 }
 
 async function FetchAllData() {
       try {
-            let data = await fetch("http://localhost:8080/books");
+            let data = await fetch("https://dead-blue-smock.cyclic.app/books");
             let all_data = await data.json();
             ShowData(all_data);
       } catch (error) {
@@ -107,7 +108,7 @@ function EditFunc(items) {
 async function PatchRequest(details, id) {
       try {
             let updated_data = await fetch(
-                  `http://localhost:8080/books/${id}`,
+                  `https://dead-blue-smock.cyclic.app/books/${id}`,
                   {
                         method: "PATCH",
                         headers: {
@@ -116,10 +117,10 @@ async function PatchRequest(details, id) {
                         body: JSON.stringify(details),
                   }
             );
-
-            if (updated_data.ok) {
+    
                   modal.style.display = "none";
-            }
+				  FetchAllData();
+        
       } catch (error) {
             console.log(error);
       }
@@ -128,11 +129,12 @@ async function PatchRequest(details, id) {
 async function DeleteRequest(id) {
       try {
             let updated_data = await fetch(
-                  `http://localhost:8080/books/${id}`,
+                  `https://dead-blue-smock.cyclic.app/books/${id}`,
                   {
                         method: "DELETE",
                   }
             );
+			FetchAllData();
       } catch (error) {
             console.log(error);
       }

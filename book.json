@@ -2,7 +2,7 @@
   "books": [
     {
       "image_url": "https://m.media-amazon.com/images/I/5165He67NEL.jpg",
-      "book_name": "Harry Potter",
+      "book_name": "Harry Potter- 1",
       "author": "J.K. Rowling",
       "genre": "Fiction",
       "edition": "2020",
@@ -10,6 +10,39 @@
       "cost": "2199",
       "borrowed": false,
       "id": 1
+    },
+    {
+      "image_url": "https://wwwflickeringmythc3c8f7.zapwp.com/q:i/r:1/wp:1/w:371/u:https://cdn.flickeringmyth.com/wp-content/uploads/2019/12/Marvels-Avengers-Iron-Man-1-1-600x938.jpg",
+      "book_name": "Iron-man",
+      "author": "Frederick Forsyth",
+      "genre": "Fiction",
+      "edition": "2021",
+      "publisher": "Marvel",
+      "cost": "3499",
+      "borrowed": true,
+      "id": 2
+    },
+    {
+      "image_url": "https://i.pinimg.com/736x/70/c3/29/70c329166ebce2984a6e0bf59f76fd5a.jpg",
+      "book_name": "Hulk",
+      "author": "Ang Lee",
+      "genre": "Science",
+      "edition": "2020",
+      "publisher": "Marvel Studio",
+      "cost": "4560",
+      "borrowed": false,
+      "id": 3
+    },
+    {
+      "image_url": "https://play-lh.googleusercontent.com/XOU3XBFQe1euGX-ZM1YggWuP4xdwm0saRQLcjClAacKS0MEmBae-kq-O4ddc2HkbHTeonw",
+      "book_name": "Mission: Impossible",
+      "author": "Bruce Geller",
+      "genre": "Fiction",
+      "edition": "2022",
+      "publisher": "Bad Robot Productions",
+      "cost": "8799",
+      "borrowed": false,
+      "id": 4
     }
   ]
 }

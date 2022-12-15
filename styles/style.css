@@ -203,7 +203,7 @@ p.signin.button{
 .keeplogin{
 	margin-top: -5px;
 }
-.keeplogin input,
+.keeplogin input,.keeplogin select,
 .keeplogin label{
 	display: inline-block;
 	font-size: 12px;	
@@ -361,7 +361,7 @@ p.change_link{
 
 /** yerk some ugly IE fixes 'cause I know someone will ask "why does it look ugly in IE?", no matter how many warnings I will put in the article */
 
-.lt8 #wrapper input{
+.lt8 #wrapper input,select{
 	padding: 10px 5px 10px 32px;
     width: 92%;
 }

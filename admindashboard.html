@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
-<body>
-	<div class="container">
-		Hello
-	</div>
-</body>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="styles/demo.css" />
+        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+                <section>              
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form autocomplete="on">
+                                <h1>Create Book</h1>
+                                <p>
+                                    <label for="username" class="uname" data-icon="u" > Book Image Url </label>
+                                    <input id="image_url" name="image_url" required="required" type="url" placeholder="book image_url"/>
+                                </p>
+                                <p>
+                                    <label for="bookname" class="youpasswd" data-icon="p"> Book Name </label>
+                                    <input id="bookname" name="password" required="required" type="text" placeholder="book name" />
+                                </p>
+								<p>
+                                    <label for="authorname" class="uname" data-icon="u">Author Name</label>
+                                    <input id="authorname" name="authorname" required="required" type="text" placeholder="author name" />
+                                </p>
+                                <p>
+                                    <select id="genre">
+										<option value="" selected>Genre</option>
+										<option value="Science">Science</option>
+										<option value="Fiction">Fiction</option>
+										<option value="History">History</option>
+										<option value="Tech">Tech</option>
+										<option value="Business">Business</option>
+									</select>
+                                </p>
+                                <p>
+                                    <select id="edition">
+										<option value="" selected>Edition</option>
+										<option value="2020">2020</option>
+										<option value="2021">2021</option>
+										<option value="2022">2022</option>
+									</select>
+                                </p>
+                                <p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >Publisher</label>
+                                    <input id="publisher" name="emailsignup" required="required" type="text" placeholder="Publisher"/>
+                                </p>
+								<p>
+                                    <label for="emailsignup" class="youmail" data-icon="e" >Cost</label>
+                                    <input id="cost" name="emailsignup" required="required" type="number" placeholder="Cost"/>
+                                </p>
+                                <p class="login button">
+                                    <input type="submit" value="Login" />
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
 </html>
+<script src="/scripts/createBook.js" ></script>

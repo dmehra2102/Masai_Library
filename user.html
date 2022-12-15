@@ -45,13 +45,65 @@
 			height: 100%;
 			object-fit: contain;
 		}
+		.modal {
+                        display: none; /* Hidden by default */
+                        position: fixed; /* Stay in place */
+                        z-index: 1; /* Sit on top */
+                        padding-top: 100px; /* Location of the box */
+                        left: 0;
+                        top: 0;
+                        width: 100%; /* Full width */
+                        height: 100%; /* Full height */
+                        overflow: auto; /* Enable scroll if needed */
+                        background-color: rgb(0, 0, 0); /* Fallback color */
+                        background-color: rgba(
+                              0,
+                              0,
+                              0,
+                              0.4
+                        ); /* Black w/ opacity */
+                  }
+
+                  /* Modal Content */
+                  .modal-content {
+                        background-color: #fefefe;
+                        margin: auto;
+                        padding: 20px;
+                        border: 1px solid #888;
+                        width: 80%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						font-size: 30px;
+						font-style: italic;
+
+                  }
 	</style>
 </head>
 <body>
+	<div>
+		<select class="genre_filter">
+			<option value="" selected>Genre</option>
+			<option value="Science">Science</option>
+			<option value="Fiction">Fiction</option>
+			<option value="Tech">Tech</option>
+			<option value="Business">Business</option>
+		</select>
+		<select class="cost_filter">
+			<option value="" selected>Sort By cost</option>
+			<option value="asc">Low to High</option>
+			<option value="desc">High to Low</option>
+		</select>
+	</div>
 	<div class="container">
 				<!-- append the body here... -->
-				
 	</div>
+	<div id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		</div>
+  </div>
 </body>
 </html>
 

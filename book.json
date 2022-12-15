@@ -8,7 +8,7 @@
       "edition": "2020",
       "publisher": "Bloomsbury",
       "cost": "2199",
-      "borrowed": false,
+      "borrowed": true,
       "id": 1
     },
     {

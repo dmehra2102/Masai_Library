@@ -82,19 +82,25 @@
 	</style>
 </head>
 <body>
-	<div>
-		<select class="genre_filter">
-			<option value="" selected>Genre</option>
-			<option value="Science">Science</option>
-			<option value="Fiction">Fiction</option>
-			<option value="Tech">Tech</option>
-			<option value="Business">Business</option>
-		</select>
-		<select class="cost_filter">
-			<option value="" selected>Sort By cost</option>
-			<option value="asc">Low to High</option>
-			<option value="desc">High to Low</option>
-		</select>
+	<div style="display: flex; justify-content: space-between;">
+		<div>
+			<button class="borrowed_books">See All the Borrowed Books</button>
+		    <select class="genre_filter">
+		    	<option value="" selected>Genre</option>
+		    	<option value="Science">Science</option>
+		    	<option value="Fiction">Fiction</option>
+		    	<option value="Tech">Tech</option>
+		    	<option value="Business">Business</option>
+		    </select>
+		    <select class="cost_filter">
+		    	<option value="" selected>Sort By cost</option>
+		    	<option value="asc">Low to High</option>
+		    	<option value="desc">High to Low</option>
+		    </select>
+		</div>
+		<div>
+			<button onclick="Logout()">Logout</button>
+		</div>
 	</div>
 	<div class="container">
 				<!-- append the body here... -->

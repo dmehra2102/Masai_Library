@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./styles/borrow.css">
+</head>
+<body>
+	<div>
+		<button class="back_btn">Go to the main Page</button>
+	</div>
+	<div class="books">
+		<table>
+			  <thead>
+					<tr>
+						  <th>Book Image</th>
+						  <th>Book Name</th>
+						  <th>Author Name</th>
+						  <th>Genre</th>
+						  <th>Edition</th>
+						  <th>Publisher</th>
+						  <th>Cost</th>
+						  <th>Borrowed</th>
+					</tr>
+			  </thead>
+			  <tbody>
+					<!-- append the body here... -->
+			  </tbody>
+		</table>
+  </div>
+</body>
+</html>
+
+<script>
+
+document.querySelector(".back_btn").addEventListener("click", ()=>{
+	window.location.href = "user.html"
+})
+
+	async function BorrowFunc(){
+		try {
+			let data = await fetch(`http://localhost:8080/books?borrowed=true`);
+			let all_data = await data.json();
+
+			ShowData(all_data);
+
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
+
+	function ShowData(datas) {
+      let mainContainer = document.querySelector("tbody");
+      mainContainer.innerHTML = "";
+
+      let new_data = datas.map((items) => {
+            return `
+		<tr>
+		   <td class="image-div"><img src='${items.image_url}' /></td>
+		   <td>${items.book_name}</td>
+		   <td>${items.author}</td>
+		   <td>${items.genre}</td>
+		   <td>${items.edition}</td>
+		   <td>${items.publisher}</td>
+		   <td>${items.cost}</td>
+		   <td>${items.borrowed}</td>
+		</tr>
+		`;
+      });
+
+      mainContainer.innerHTML = new_data.join(" ");
+}
+
+BorrowFunc();
+
+</script>

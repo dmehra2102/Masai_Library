@@ -109,3 +109,14 @@ async function ConfirmBook(id){
 }
 
 FetchAllData();
+
+
+const borrowed_books = document.querySelector(".borrowed_books");
+borrowed_books.addEventListener("click",()=>{
+	window.location.href = "borrow.html";
+})
+
+
+function Logout(){
+	window.location.href = "index.html";
+}
